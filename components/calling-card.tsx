@@ -64,6 +64,9 @@ export function CallingCard() {
             </a>
           </li>
         </ul>
+        <p className="mt-6 text-center text-sm text-blue-900/70">
+          This is a test, this is only a test
+        </p>
       </footer>
     </article>
   )
