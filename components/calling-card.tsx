@@ -10,6 +10,9 @@ const services = [
 const linkedInSearchUrl =
   'https://www.linkedin.com/search/results/people/?keywords=michael%20sea'
 
+const facebookSearchUrl =
+  'https://www.facebook.com/search/people/?q=michael%20corrigan'
+
 export function CallingCard() {
   return (
     <article className="w-full max-w-md overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-sm">
@@ -43,15 +46,30 @@ export function CallingCard() {
         <h2 className="text-sm font-medium uppercase tracking-wider text-blue-700">
           How to reach me
         </h2>
-        <a
-          href={linkedInSearchUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center gap-2 rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-        >
-          LinkedIn: Michael Sea
-          <span className="sr-only">(opens in a new tab)</span>
-        </a>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          <li>
+            <a
+              href={linkedInSearchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+            >
+              LinkedIn: Michael Sea
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={facebookSearchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-blue-700 px-4 py-2 text-sm font-medium text-blue-700 transition-colors hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+            >
+              Messenger: Michael Corrigan
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          </li>
+        </ul>
       </footer>
     </article>
   )
